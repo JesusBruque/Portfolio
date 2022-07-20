@@ -8,6 +8,8 @@ import Home from "./views/Home/Home.jsx";
 
 //Layout
 
+import Layout from "./Layout/Layout.jsx";
+
 //create your first component
 const AppRouter = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -18,16 +20,12 @@ const AppRouter = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          <Navbar />
-          <Routes>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route>
-              <h1>Not found!!</h1>
-            </Route>
-          </Routes>
-          <Footer />
+          <Layout>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route element={<h1>Not found!</h1>} />
+            </Routes>
+          </Layout>
         </ScrollToTop>
       </BrowserRouter>
     </div>
