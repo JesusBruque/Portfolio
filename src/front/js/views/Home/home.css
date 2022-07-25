@@ -1,5 +1,22 @@
-img {
-  height: 100%;
-  width: 100%;
-  opacity: 0.4;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.presentation {
+  width: 600px;
+  font-size: x-large;
+}
+
+.p1 {
+  font-size: 300%;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.p2 {
+  font-size: 150%;
+  font-family: "Courier New", Courier, monospace;
 }
